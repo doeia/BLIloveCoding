@@ -1,2 +1,11 @@
 <text class='title'>模板</text>
 <button size="mini">按钮</button>
+<button size="mini" 
+          open-type="getUserInfo" 
+          bindgetuserinfo="handleGetUserInfo">
+     获取受权
+</button>
+
+<open-data type="userNickName"></open-data>
+
+<view wx:for='{{list}}'>{{item.title}}</view>
