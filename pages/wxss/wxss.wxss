@@ -1,0 +1,14 @@
+/* pages/wxss/wxss.wxss */
+@import './style/box.wxss';
+@import './style/cotent.wxss';
+@import './style/weui-searchbar.wxss';
+
+.box{
+     color: blue;
+     font-size: 32px;
+}
+
+.content{
+     background: purple !important;
+}
+

@@ -1,2 +1,6 @@
+<include src="/wxml/header.wxml"/>
+
 <text class='title'>模板</text>
 <button size="mini">按钮</button>
+
+<include src="/wxml/footer.wxml"/>
