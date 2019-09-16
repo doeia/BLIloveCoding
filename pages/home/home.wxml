@@ -1,2 +1,52 @@
 <text class='title'>模板</text>
 <button size="mini">按钮</button>
+
+<!-- 使用自定义组件 -->
+<!-- <my-cpn></my-cpn>
+<my-style></my-style> -->
+
+<!-- 给自定义组件传递数据/样式 -->
+<my-prop title="haha" titleclass="red"/>
+<my-prop title="hehe" titleclass="green"/>
+<my-prop titleclass="blue"/>
+
+<!-- 组件发出事件 -->
+<view>当前计数： {{counter}}</view>
+<my-event bind:increment="handleIncrement"/>
+
+<!-- tab-control练习 -->
+<w-tab-control titles="{{['流行','新款','精选']}}"
+               bind:itemclick="handleTabClick"/>
+
+<!-- 直接选中组件修改数据/调用方法 -->
+<!-- 之前是组件内部有个按钮修改首页数据
+现在是首页有个按钮修改组件内数据 -->
+<button size="mini" bind:tap="handleIncrementCpn">修改组件内数据</button>
+<my-sel class="sel-class" id="sel-id"/>
+
+<view>-----------------------</view>
+<!-- 插槽 -->
+<my-slot>
+     <button size="mini">我是插槽的按钮</button>
+</my-slot>
+<my-slot>
+     <text>插槽文本例子</text>
+</my-slot>
+<my-slot>
+     <slider value="60"></slider>
+</my-slot>
+<!-- 多个插槽 -->
+<!-- 每个插槽都要有名字
+插槽要添加option:multipelSlotes -->
+<my-mslot>
+<button size="mini" slot="slot2">我是插槽的按钮</button>
+<slider slot="slot1"></slider>
+<text slot="slot3">hhh</text>
+</my-mslot>
+
+
+
+
+
+
+
