@@ -1,2 +1,15 @@
-<text class='title'>模板</text>
-<button size="mini">按钮</button>
+<button bindtap="handleBtnClick" size="mini">按钮</button>
+<button bind:tap="handleBtnClick" size="mini">按钮</button>
+<button catch:tap="handleBtnClick" size="mini">按钮</button>
+
+
+<view class="box" 
+     bind:touchstart="onTouchStart"
+     bind:touchmove="onTouchMove"
+     bind:touchend="onTouchEnd"
+     bind:touchcancel="onTouchCancel"
+     bind:tap="onTap"
+     bind:longpress="onLongPress">
+</view>
+
+<button size="mini" bindtap="handleEventClick">事件对象</button>
