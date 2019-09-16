@@ -1,2 +1,9 @@
-<text class='title'>模板</text>
-<button size="mini">按钮</button>
+<!-- 数据绑定 -->
+<view>databind {{value}}</view>
+
+<!-- 列表展示 -->
+<view wx:for='{{students}}'>{{item.name}}--{{item.age}}</view>
+
+<!-- 事件监听 -->
+<view>当前计数: {{counter}}</view>
+<button size="mini" bindtap="addCount">+</button>
