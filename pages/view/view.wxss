@@ -1,0 +1,11 @@
+/* pages/view/view.wxss */
+.box1{
+     width: 100px;
+     height: 100px;
+     background: purple;
+}
+
+.box2{
+     background: orange;
+     font-size: 30px;
+}

@@ -1,0 +1,24 @@
+<!-- 默认大小320*240 -->
+<image></image>
+<text>哈哈</text>
+
+<image src='../../assets/tabbar/cart.png'></image>
+<image src='/assets/tabbar/cart.png'></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- 相册选择 -->
+<button bindtap="handleChooseAlbum">选中图片</button>
+<image src="{{imagePath}}"></image>
+
+<view>-------------------------</view>
+<!-- 图片懒加载 -->
+<image wx:for="{{1}}"
+     src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+     bindload="handleImageLoad"
+     lazy-load>
+</image>
+
+<!-- 长按识别小程序码 -->
+<image
+show-menu-by-longpress
+src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>

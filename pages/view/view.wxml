@@ -1,0 +1,6 @@
+<!-- view是个容器， 可以包括其它组件 -->
+
+<view>哈哈哈</view>
+<view>呵呵呵</view>
+
+<view class="box1" hover-class="box2">box1</view>
