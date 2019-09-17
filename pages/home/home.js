@@ -8,59 +8,64 @@ Page({
 
      },
 
-     /**
-      * 生命周期函数--监听页面加载
-      */
-     onLoad: function (options) {
-
+     handleShowToast(){
+          wx.showToast({
+               title: '加载中',
+               duration:3000,
+               icon:'loading',
+               //执行时，其它功能不可以用
+               mask:true,
+               success:function(){
+                    console.log('展示弹窗成功')
+               },
+               fail:function(){
+                    console.log('')
+               }
+          })
      },
-
-     /**
-      * 生命周期函数--监听页面初次渲染完成
-      */
-     onReady: function () {
-
+     handleShowModal(){
+          wx.showModal({
+               title: '我是标题',
+               content: '哈哈哈',
+               cancelText:'退出',
+               cancelColor:'red',
+               success:function(res){
+                    console.log(res)
+                    if(res.cancel){
+                         console.log('用户点击了取消按钮')
+                    }
+                    if(res.confirm){
+                         console.log('用户点击了确定按钮')
+                    }
+               }
+          })
      },
-
-     /**
-      * 生命周期函数--监听页面显示
-      */
-     onShow: function () {
-
+     handleShowLoading(){
+          wx.showLoading({
+               title: '加载...',
+               mask:true
+          })
+          setTimeout(()=>{
+               wx.hideLoading()
+          },1000)
+         
      },
-
-     /**
-      * 生命周期函数--监听页面隐藏
-      */
-     onHide: function () {
-
+     handleShowAction(){
+          wx.showActionSheet({
+               itemList: ['相册', '拍照'],
+               itemColor:'red',
+               success:function(res){
+                    console.log(res)
+                    
+               }
+          })
      },
-
-     /**
-      * 生命周期函数--监听页面卸载
-      */
-     onUnload: function () {
-
-     },
-
-     /**
-      * 页面相关事件处理函数--监听用户下拉动作
-      */
-     onPullDownRefresh: function () {
-
-     },
-
-     /**
-      * 页面上拉触底事件的处理函数
-      */
-     onReachBottom: function () {
-
-     },
-
-     /**
-      * 用户点击右上角分享
-      */
-     onShareAppMessage: function () {
-
+     onShareAppMessage:function(options){
+          return {
+               title:'你好啊，',
+               path:'/pages/about/about',
+               imageUrl:      'http://s3.mogucdn.com/mlcdn/c45406/170915_0a93207ci28kelh617k4hh62l65lb_640x960.jpg'
+          }
      }
+
 })
