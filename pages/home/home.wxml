@@ -1,2 +1,21 @@
-<text class='title'>模板</text>
-<button size="mini">按钮</button>
+<!-- 展示轮播图 -->
+<w-swiper list="{{banners}}"/>
+
+<!-- 推荐数据展示 -->
+<w-recommend list="{{recommends}}" bind:imageload="handleImageLoad"/>
+
+<!-- 本周流行 -->
+<w-popular></w-popular>
+
+<!-- tab-control -->
+<w-tab-control titles="{{titles}}" 
+               bind:tabclick="handleTabClick"
+               id="tab-control"
+               class="{{isTabFixed ? 'fixed': ''}}"/>
+<w-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}"/>
+<!-- 展示产品数据 -->
+<w-goods goods="{{goods[currentType].list}}"/>
+
+<!-- 回到顶部 -->
+<!-- 对于自定义组件hidden属性无效 -->
+<w-back-top wx:if="{{showBackTop}}"/>
